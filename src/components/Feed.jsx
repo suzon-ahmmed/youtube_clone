@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { fatchFromAPI } from '../utils/fatchFormAPI';
+import { fetchFromAPI } from '../utils/fetchFormAPI';
 import { SideBar, Videos } from './';
 
 const Feed = () => {
@@ -9,17 +9,17 @@ const Feed = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(()=>{
-    fatchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
     .then((data)=> setVideos(data.items))
   },[selectedCategory]);
   return (
     <Stack sx={{flexDirection: {sx: "column", md:"row"}}}>
-      <Box sx={{ height:{sx:"auto", md:"93.8vh"}, borderRight:"1px solid #3d3d3d", px:{sx: 0, md: 2} }}>
+      <Box sx={{ height:{sx:"auto", md:"94vh"}, borderRight:"1px solid #3d3d3d", px:{sx: 0, md: 2} }}>
         <SideBar 
         selectedCategory={selectedCategory} 
         setSelectedCategory={setSelectedCategory} 
         />
-        <Typography className='copyright' variant='body2' pt={1.5}>
+        <Typography  variant='body2' pt={1.5} sx={{display: {xs: 'none', md: 'block'}, textAlign: 'center'}}>
           Copyright 2022 @SA 
         </Typography>
       </Box>

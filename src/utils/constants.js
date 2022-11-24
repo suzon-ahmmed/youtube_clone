@@ -17,6 +17,7 @@ export const logo = 'https://i.postimg.cc/Fzzjw2RX/player.png';
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
   { name: 'JS Mastery', icon: <CodeIcon />, },
+  { name: 'Hitesh Choudhary', icon: <CodeIcon />, },
   { name: 'Coding', icon: <CodeIcon />, },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'NextJS', icon: <CodeIcon />, },
