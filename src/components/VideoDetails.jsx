@@ -21,7 +21,8 @@ const VideoDetails = () => {
       .then((data)=> setVideos(data.items));
 
   },[id]);
-  // console.log(videoDetails);
+
+  console.log(videoDetails);
   
   if(!videoDetails?.snippet) return 'Loading...';
 

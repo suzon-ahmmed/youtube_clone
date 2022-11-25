@@ -3,8 +3,12 @@ import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { demoChannelUrl, demoVideoUrl } from '../utils/constants';
-const VideoCard = ({video: {id: {videoId}, snippet}}) => {
-    // console.log(videoId, snippet);
+const VideoCard = ({video: {id: {videoId}, snippet}, video}) => {
+    // console.log(video);
+    const publishDate = new Date(snippet?.publishTime);
+    // const currentDate = new Date();
+    // const time = currentDate - publishDate;
+    // console.log(currentDate);
   return (
     <Card sx={{width: {xs:'100%', sm:'300px',md: '320px'   }, boxShadow: 'none', borderRadius: '0px' }}>
       <Link to={videoId ? `/video/${videoId}`: demoVideoUrl }>
@@ -24,6 +28,9 @@ const VideoCard = ({video: {id: {videoId}, snippet}}) => {
       <Typography  variant='subtitle2' fontWeight='bold' sx={{ textOverflow: 'ellipsis',  width: "90%",  color: '#757575',display: 'flex', alignItems: 'center' }}>
         {snippet?.channelTitle}
         <CheckCircle sx={{ fontSize: '12px', ml:'5px'}}/>
+      </Typography>
+      <Typography  variant='subtitle2' fontWeight='bold' sx={{ textOverflow: 'ellipsis',  width: "90%",  color: '#757575',display: 'flex', alignItems: 'center' }}>
+        {publishDate.toLocaleDateString()}
       </Typography>
       </Link>
       </CardContent>

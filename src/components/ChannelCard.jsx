@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ChannelCard = ({channel, marginTop}) => {
-  // console.log(channel.id.channelId);
+  // console.log(channel);
   return (
     <Box sx={{width: {xs:'100%', sm:'300px', md: '320px'}, height: '300px', boxShadow: 'none', borderRadius: '0px', background: '#1e1e1e0', marginTop, }}>
       <Link to={`/channel/${channel?.id?.channelId}`}>
