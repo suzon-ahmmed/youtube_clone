@@ -18,21 +18,22 @@ const VideoCard = ({video: {id: {videoId}, snippet}, video}) => {
         sx={{width: {xs:'100%', sm:'300px',md: '320px'}, height:180}}
         />
       </Link>
-      <CardContent sx={{width:'92%', background: '#1e1e1e', height:80}}>
-      <Link to={videoId ? `/video/${videoId}`: demoVideoUrl }>
-      <Typography  variant='subtitle1' sx={{ textOverflow: 'ellipsis', width: "100%", height:'60px', color: '#ffff', overflow: 'hidden', }}>
-        {snippet?.title}
-      </Typography>
-      </Link>
-      <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}`: demoChannelUrl }>
-      <Typography  variant='subtitle2' fontWeight='bold' sx={{ textOverflow: 'ellipsis',  width: "90%",  color: '#757575',display: 'flex', alignItems: 'center' }}>
-        {snippet?.channelTitle}
-        <CheckCircle sx={{ fontSize: '12px', ml:'5px'}}/>
-      </Typography>
-      <Typography  variant='subtitle2' fontWeight='bold' sx={{ textOverflow: 'ellipsis',  width: "90%",  color: '#757575',display: 'flex', alignItems: 'center' }}>
-        {publishDate.toLocaleDateString()}
-      </Typography>
-      </Link>
+      <CardContent sx={{width:'100%', background: '#1e1e1e', height:135}}>
+        <Link to={videoId ? `/video/${videoId}`: demoVideoUrl }>
+          <Typography  variant='subtitle1' sx={{ textOverflow: 'ellipsis', width: "100%", height:'60px', color: '#ffff', overflow: 'hidden', }}>
+            {snippet?.title}
+         </Typography>
+       </Link>
+       <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}`: demoChannelUrl }>
+         <Typography  variant='subtitle1' fontWeight='bold' sx={{ textOverflow: 'ellipsis',  width: "90%",  color: '#757575',display: 'flex', alignItems: 'center' }}>
+            {snippet?.channelTitle}
+           <CheckCircle sx={{ fontSize: '12px', ml:'5px'}}/>
+          </Typography>
+        </Link>
+        <Typography  variant='subtitle2' fontWeight='bold' sx={{ textOverflow: 'ellipsis',  width: "90%",  color: '#757575',display: 'flex', alignItems: 'center' }}>
+          {publishDate.toLocaleDateString()}
+        </Typography>
+       
       </CardContent>
     </Card>
     

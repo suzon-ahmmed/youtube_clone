@@ -16,12 +16,12 @@ export const logo = 'https://i.postimg.cc/Fzzjw2RX/player.png';
 
 export const categories = [
   { name: 'New video', icon: <HomeIcon />, },
-  { name: 'Javascript', icon: <CodeIcon />, },
   { name: 'Coding', icon: <CodeIcon />, },
+  { name: 'Education', icon: <SchoolIcon />, },
+  { name: 'Music', icon: <MusicNoteIcon /> },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'NextJS', icon: <CodeIcon />, },
-  { name: 'Music', icon: <MusicNoteIcon /> },
-  { name: 'Education', icon: <SchoolIcon />, },
+  { name: 'Javascript', icon: <CodeIcon />, },
   { name: 'Podcast', icon: <GraphicEqIcon />, },
   { name: 'Movie', icon: <OndemandVideoIcon />, },
   { name: 'Gaming', icon: <SportsEsportsIcon />, },
