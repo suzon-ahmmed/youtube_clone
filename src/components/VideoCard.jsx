@@ -10,12 +10,12 @@ const VideoCard = ({video: {id: {videoId}, snippet}, video}) => {
     // const time = currentDate - publishDate;
     // console.log(currentDate);
   return (
-    <Card sx={{width: {xs:'100%', sm:'300px',md: '320px'   }, boxShadow: 'none', borderRadius: '0px' }}>
+    <Card sx={{width: {xs:'100%', sm:'300px', md: '310px', lg: '355px'   }, boxShadow: 'none', borderRadius: '0px' }}>
       <Link to={videoId ? `/video/${videoId}`: demoVideoUrl }>
       <CardMedia 
         image={snippet?.thumbnails?.high?.url} 
         alt={snippet?.title}
-        sx={{width: {xs:'100%', sm:'300px',md: '320px'}, height:180}}
+        sx={{width: {xs:'100%', sm:'300px', md: '310px', lg: '355px'}, height:180}}
         />
       </Link>
       <CardContent sx={{width:'100%', background: '#1e1e1e', height:135}}>

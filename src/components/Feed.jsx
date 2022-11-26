@@ -23,7 +23,7 @@ const Feed = () => {
           Copyright 2022 @SA 
         </Typography>
       </Box>
-      <Box pl={2} sx={{overflow: "auto", height:"92vh", flex:2}}>
+      <Box px={2} sx={{overflow: "auto", height:"95vh", flex:2}}>
         <Typography variant='h5' py={2} fontWeight="bold">
           {selectedCategory} <span style={{color: "#fc1503"}}>videos</span>
         </Typography>

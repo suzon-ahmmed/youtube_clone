@@ -1,5 +1,5 @@
 import { CheckCircle } from '@mui/icons-material';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, CircularProgress, Stack, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Link, useParams } from 'react-router-dom';
@@ -22,14 +22,14 @@ const VideoDetails = () => {
 
   },[id]);
 
-  console.log(videoDetails);
+  // console.log(videoDetails);
   
-  if(!videoDetails?.snippet) return 'Loading...';
+  if(!videoDetails?.snippet) return <Box minHeight='94.2vh' sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}> <CircularProgress color="inherit" /></Box>;
 
 
   const {snippet: {title, channelId, channelTitle}, statistics: {likeCount, viewCount} } = videoDetails;
   return (
-    <Box minHeight='94.2vh'>
+    <Box minHeight='95vh'>
       <Stack direction={{xs: 'column', md: 'row'}}>
         <Box flex={1}>
           <Box sx={{width: '100%', position: 'static', top: '86px' }}>

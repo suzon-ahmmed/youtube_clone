@@ -13,7 +13,7 @@ const Navbar = () => {
        <Link to="/">
         <Box component="div" sx={{display:"flex", alignItems:"center"}}>
           <img src={logo} alt="logo" width={40} /> 
-          <Typography variant='h5' fontStyle="bold" sx={{color:"#fff", letterSpacing: 0, fontWeight: 'bold', display: {xs: 'none', sm: 'block'}}}>
+          <Typography variant='h5' fontStyle="bold" sx={{color:"#fff", letterSpacing: 0, marginLeft: '10px', fontWeight: 'bold', display: {xs: 'none', sm: 'block'}}}>
           YouTube 
           </Typography>
         </Box>
